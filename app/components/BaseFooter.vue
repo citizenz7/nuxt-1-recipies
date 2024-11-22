@@ -42,7 +42,7 @@
                                     <NuxtLink to="/politique-confidentialite" class="hover:underline">Politique de confidentialité</NuxtLink>
                                 </li>
                                 <li>
-                                    <a href="#" class="hover:underline">Mentions légales</a>
+                                    <NuxtLink to="/mentions-legales" class="hover:underline">Mentions légales</NuxtLink>
                                 </li>
                             </ul>
                         </div>
