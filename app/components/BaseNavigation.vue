@@ -5,14 +5,14 @@
     <nav class="flex container items-center">
       <NuxtLink to="/" class="flex gap-1 items-center">
         <NuxtImg width="56px" format="webp" densities="x1" src="/icon-green.png" alt="ImageLogo" />
-        <span class="font-bold main-title">Mon joli site de recettes</span>
+        <span class="font-bold main-title">RecettesAMoi</span>
       </NuxtLink>
       <ul class="flex gap-6 ml-auto text-xl font-bold capitalize">
         <li>
           <NuxtLink to="/">Accueil</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/recipes">Recettes</NuxtLink>
+          <NuxtLink to="/recettes">Recettes</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/about">A propos</NuxtLink>

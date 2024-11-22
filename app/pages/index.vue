@@ -18,8 +18,8 @@ useSeoMeta({
 
 <template>
     <main>
-        <section class="bg-[#f1f1f1] main-container">
-            <div class="container flex flex-col lg:flex-row items-center py-20 gap-10">
+        <section class="bg-[#f1f1f1]">
+            <div class="container flex flex-col lg:flex-row items-center py-10 gap-10">
                 <div class="flex-1 order-2 lg:order-1 text-center lg:text-left">
                     <h1 class="text-3xl lg:text-5xl font-extrabold mb-6 text-balance">
                         Maîtrisez la cuisine en toute simplicité : libérez le chef qui sommeille en vous dès aujourd’hui !
@@ -27,9 +27,8 @@ useSeoMeta({
                     <p class="text-xl lg:text-2xl mb-8 text-balance">
                         Découvrez des recettes vous aidant à trouver la manière la plus simple de cuisiner.
                     </p>
-                    <a href="#recipes" class="px-4 py-2 text-white self-start bg-dodgeroll-gold rounded-md text-lg cursor-pointer">
-                        Parcourir les recettes
-                    </a>
+
+                    <NuxtLink to="/recettes" class="px-4 py-2 text-white self-start bg-dodgeroll-gold rounded-md text-lg cursor-pointer">Parcourir toutes les recettes</NuxtLink>
                 </div>
                 <div class="flex-1 order-1 lg:order-2">
                     <NuxtImg sizes="xs:100vw sm:667px" src="/nuxt-course-hero.png" format="webp" densities="x1"

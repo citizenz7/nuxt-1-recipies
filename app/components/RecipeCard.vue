@@ -8,7 +8,8 @@ defineProps<{
 
 <template>
     <div id="recipes" class="shadow rounded-md">
-        <NuxtImg sizes="xs:100vw sm:50vw md:50vw lg:50vw" format="webp" densities="x1" :src="recipe.image" :alt="recipe.name" class="rounded-t-md" />
+        <!--Récupérer l'image depuis http://127.0.0.1:8000/uploads/img/recipes/ -->
+        <NuxtImg sizes="xs:100vw sm:50vw md:50vw lg:50vw" format="webp" densities="x1" :src="`http://127.0.0.1:8000/uploads/img/recipes/${recipe.image}`" :alt="recipe.name" class="rounded-t-md" />
         <div class="flex flex-col py-6 px-4">
             <p class="text-2xl font-semibold mb-2">{{ recipe.name }}</p>
             <div class="font-normal w-full bg-white/80 flex gap-8 text-xl mb-4">

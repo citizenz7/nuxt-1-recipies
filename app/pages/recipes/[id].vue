@@ -2,7 +2,10 @@
 import { type Recipe } from '../../../types/types';
 const { id } = useRoute().params;
 
-const { data, error } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`);
+// const { data, error } = await useFetch<Recipe>(`https://dummyjson.com/recipes/${id}`);
+// const { data, error } = await useFetch<RecipeResponse>("http://127.0.0.1:8000/api/recipes/${id}");
+const { data, error } = await useFetch<Recipe>(`http://127.0.0.1:8000/api/recipes/${id}`);
+console.log(data);
 
 if(error.value) {
     throw createError({
@@ -49,7 +52,7 @@ useSeoMeta({
         </div>
 
         <!-- Image -->
-        <NuxtImg :src="data?.image" densities="x1" sizes="xs:100vw sm:100vw md:100vw lg:100vw" class="w-full max-h-[500px] object-cover rounded-md shadow-sm mb-12" :alt="data?.name" />
+        <NuxtImg :src="`http://127.0.0.1:8000/uploads/img/recipes/${data?.image}`" densities="x1" sizes="xs:100vw sm:100vw md:100vw lg:100vw" class="w-full max-h-[500px] object-cover rounded-md shadow-sm mb-12" :alt="data?.name" />
 
         <!-- Ingredients -->
         <div class="mb-8">
@@ -62,7 +65,7 @@ useSeoMeta({
                             class="relative w-6 h-6 rounded-full border-2 border-dodgeroll-gold flex items-center justify-center peer-checked:after:absolute peer-checked:after:w-4 peer-checked:after:h-4 peer-checked:after:bg-dodgeroll-gold peer-checked:after:rounded-full">
                         </div>
                         <span class="peer-checked:line-through">
-                            {{ ingredient }}
+                            {{ ingredient.title }}
                         </span>
                     </label>
                 </li>
@@ -78,7 +81,7 @@ useSeoMeta({
                         class="flex items-center justify-center bg-dodgeroll-gold w-7 h-7 rounded-full text-white text-sm">
                         {{ index + 1 }}
                     </span>
-                    <span class="flex-1">{{ instruction }}</span>
+                    <span class="flex-1">{{ instruction.title }}</span>
                 </li>
             </ul>
         </div>
