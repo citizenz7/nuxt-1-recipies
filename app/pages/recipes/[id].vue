@@ -47,6 +47,17 @@ useSeoMeta({
                     <Icon name="mdi:star" style="color: #f79f1a" />
                     <span>{{ data?.rating }} ({{ data?.reviewCount }})</span>
                 </div>
+                <div class="flex items-center gap-1">
+                    <Icon name="mdi:food-fork-drink" style="color: #f79f1a" />
+                    <span>{{ data?.serving }}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <!-- Tags -->
+                    <Icon name="mdi:tag" style="color: #f79f1a" />
+                    <span v-for="tag in data?.tags" class="flex items-center gap-1">
+                        <span class="bg-dodgeroll-gold text-white text-xs px-2 py-1 rounded-full">{{ tag.title }}</span>
+                    </span>
+                </div>
             </div>
             <hr />
         </div>

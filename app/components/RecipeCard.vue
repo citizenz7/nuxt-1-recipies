@@ -25,6 +25,10 @@ defineProps<{
                     <Icon name="mdi:star" style="color: #f79f1a" />
                     <span>{{ recipe.rating }} ({{ recipe.reviewCount }})</span>
                 </div>
+                <div class="flex items-center gap-1">
+                    <Icon name="mdi:food-fork-drink" style="color: #f79f1a" />
+                    <span>{{ recipe.servings }}</span>
+                </div>
             </div>
             <BaseBtn :to="`/recipes/${recipe.id}`" label="Voir la recette" />
         </div>
